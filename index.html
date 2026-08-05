@@ -479,11 +479,12 @@ footer{background:var(--bg-deep);border-top:1px solid rgba(255,255,255,.06);padd
 @media(max-width:600px){.print-grid{grid-template-columns:1fr}}
 
 /* ---------- Carrossel de logos ---------- */
-.logo-marquee{overflow:hidden;position:relative;-webkit-mask-image:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent);mask-image:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent)}
-.logo-track{display:flex;width:max-content;animation:logoscroll 48s linear infinite}
-.logo-track:hover{animation-play-state:paused}
+.logo-marquee{overflow-x:auto;overflow-y:hidden;position:relative;cursor:grab;scrollbar-width:none;-ms-overflow-style:none;-webkit-mask-image:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent);mask-image:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent)}
+.logo-marquee::-webkit-scrollbar{display:none}
+.logo-marquee.dragging{cursor:grabbing}
+.logo-marquee.dragging .logo-card{pointer-events:none}
+.logo-track{display:flex;width:max-content}
 .logo-track .logo-card{flex:0 0 150px;width:150px;margin-right:16px}
-@keyframes logoscroll{to{transform:translateX(-50%)}}
 @media(max-width:540px){.logo-track .logo-card{flex-basis:120px;width:120px}}
 </style>
 </head>
@@ -502,7 +503,7 @@ footer{background:var(--bg-deep);border-top:1px solid rgba(255,255,255,.06);padd
       <a href="#contato">Contato</a>
     </nav>
     <div class="nav-cta">
-      <a href="#contato" class="btn btn-primary">Solicitar Diagnóstico</a>
+      <a href="#contato" class="btn btn-primary">Gerar Análise</a>
       <button class="burger" id="burger" aria-label="Abrir menu">
         <span></span><span></span><span></span>
       </button>
@@ -516,7 +517,7 @@ footer{background:var(--bg-deep);border-top:1px solid rgba(255,255,255,.06);padd
   <a href="#resultados">Resultados</a>
   <a href="#clientes">Clientes</a>
   <a href="#contato">Contato</a>
-  <a href="#contato" class="btn btn-primary">Solicitar Diagnóstico</a>
+  <a href="#contato" class="btn btn-primary">Gerar Análise</a>
 </div>
 
 <!-- ============ HERO ============ -->
@@ -614,7 +615,7 @@ footer{background:var(--bg-deep);border-top:1px solid rgba(255,255,255,.06);padd
       <div class="comp-col comp-good reveal">
         <h3>✅ Como a Mouran Midia trabalha</h3>
         <ul>
-          <li><span class="mark mark-c">✓</span>Diagnóstico do negócio, oferta e público</li>
+          <li><span class="mark mark-c">✓</span>Análise do negócio, oferta e público</li>
           <li><span class="mark mark-c">✓</span>Estratégia de aquisição alinhada ao objetivo da empresa</li>
           <li><span class="mark mark-c">✓</span>Campanhas com foco em leads, vendas e oportunidades reais</li>
           <li><span class="mark mark-c">✓</span>Acompanhamento de métricas importantes</li>
@@ -705,7 +706,7 @@ footer{background:var(--bg-deep);border-top:1px solid rgba(255,255,255,.06);padd
       <div class="mapa-card reveal"><div class="mapa-letter">A</div><h3>Aceleração</h3><p>Quando encontramos caminhos de resultado, buscamos aumentar volume com mais controle, dados e previsibilidade.</p></div>
     </div>
     <div class="timeline">
-      <div class="tl-step reveal"><div class="n">1</div><h3>Diagnóstico</h3><p>Análise do negócio, oferta, público, concorrência e histórico de campanhas.</p></div>
+      <div class="tl-step reveal"><div class="n">1</div><h3>Análise</h3><p>Análise do negócio, oferta, público, concorrência e histórico de campanhas.</p></div>
       <div class="tl-step reveal"><div class="n">2</div><h3>Planejamento</h3><p>Definição de estratégia, canais, orçamento, criativos, mensagens e funil.</p></div>
       <div class="tl-step reveal"><div class="n">3</div><h3>Estruturação</h3><p>Configuração de campanhas, públicos, eventos, pixels, conversões e páginas.</p></div>
       <div class="tl-step reveal"><div class="n">4</div><h3>Otimização</h3><p>Acompanhamento das métricas, testes, cortes, ajustes e melhorias contínuas.</p></div>
@@ -779,7 +780,7 @@ footer{background:var(--bg-deep);border-top:1px solid rgba(255,255,255,.06);padd
           <li><span class="mark mark-c">✓</span>+R$ 14,6 milhões em faturamento gerado</li>
           <li><span class="mark mark-c">✓</span>+5 anos de experiência no mercado</li>
         </ul>
-        <div style="margin-top:26px"><a href="#contato" class="btn btn-primary">Solicitar diagnóstico</a></div>
+        <div style="margin-top:26px"><a href="#contato" class="btn btn-primary">Gerar Análise</a></div>
       </div>
     </div>
   </div>
@@ -888,7 +889,7 @@ footer{background:var(--bg-deep);border-top:1px solid rgba(255,255,255,.06);padd
       <h2>Como funciona para começar</h2>
     </div>
     <div class="proc-grid">
-      <div class="proc-card reveal"><div class="num">01</div><h3>Você solicita o diagnóstico</h3><p>Preenche o formulário ou chama no WhatsApp para entendermos seu momento atual.</p></div>
+      <div class="proc-card reveal"><div class="num">01</div><h3>Você solicita a análise</h3><p>Preenche o formulário ou chama no WhatsApp para entendermos seu momento atual.</p></div>
       <div class="proc-card reveal"><div class="num">02</div><h3>Analisamos o cenário</h3><p>Avaliamos seu negócio, objetivo, estrutura, verba e oportunidades de crescimento.</p></div>
       <div class="proc-card reveal"><div class="num">03</div><h3>Apresentamos o caminho</h3><p>Mostramos quais canais e estratégias fazem mais sentido para sua realidade.</p></div>
       <div class="proc-card reveal"><div class="num">04</div><h3>Iniciamos a estratégia</h3><p>Com tudo alinhado, estruturamos campanhas, métricas e rotina de otimização.</p></div>
@@ -900,8 +901,8 @@ footer{background:var(--bg-deep);border-top:1px solid rgba(255,255,255,.06);padd
 <section class="section" id="contato">
   <div class="wrap">
     <div class="head reveal">
-      <span class="eyebrow">Diagnóstico gratuito</span>
-      <h2>Solicite um diagnóstico do seu tráfego</h2>
+      <span class="eyebrow">Análise gratuita</span>
+      <h2>Gere uma análise do seu tráfego</h2>
       <p class="lead">Vamos analisar o momento atual do seu negócio e entender como o tráfego pago pode ajudar você a atrair mais clientes, gerar mais oportunidades e vender com mais previsibilidade.</p>
       <p class="scarcity">Trabalhamos com um número limitado de clientes por vez para garantir performance. Retornamos em até <b>24h úteis</b>.</p>
     </div>
@@ -944,8 +945,8 @@ footer{background:var(--bg-deep);border-top:1px solid rgba(255,255,255,.06);padd
             </select>
           </div>
           <div class="field"><label for="msg">Mensagem</label><textarea id="msg" name="msg" placeholder="Conte um pouco sobre o seu momento atual..."></textarea></div>
-          <button type="submit" class="btn btn-primary btn-lg">Solicitar diagnóstico gratuito</button>
-          <p class="privacy">✓ Sem compromisso. Sem cobrança. Só uma análise honesta do seu cenário.<br>🔒 Suas informações serão usadas apenas para contato e análise do seu diagnóstico.</p>
+          <button type="submit" class="btn btn-primary btn-lg">Gerar análise gratuita</button>
+          <p class="privacy">✓ Sem compromisso. Sem cobrança. Só uma análise honesta do seu cenário.<br>🔒 Suas informações serão usadas apenas para contato e análise do seu cenário.</p>
         </form>
       </div>
 
@@ -954,10 +955,10 @@ footer{background:var(--bg-deep);border-top:1px solid rgba(255,255,255,.06);padd
           <div class="contact-photo"><img src="data:image/jpeg;base64,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" alt="Esdras Queiroz, gestor de tráfego da Mouran Midia" /></div>
           <h3>Prefere falar direto?</h3>
           <p style="margin:8px 0 16px">Você será atendido diretamente pela equipe da Mouran Midia.</p>
-          <a href="https://wa.me/5569992431461?text=Ol%C3%A1%2C%20vim%20do%20site%20e%20gostaria%20de%20agendar%20meu%20diagn%C3%B3stico." class="btn btn-wpp" target="_blank" rel="noopener" style="width:100%">Chamar no WhatsApp</a>
+          <a href="https://wa.me/5569992431461?text=Ol%C3%A1%2C%20vim%20do%20site%20e%20gostaria%20de%20gerar%20minha%20an%C3%A1lise." class="btn btn-wpp" target="_blank" rel="noopener" style="width:100%">Chamar no WhatsApp</a>
         </div>
         <div class="card">
-          <h3 style="margin-bottom:12px">No diagnóstico você vai:</h3>
+          <h3 style="margin-bottom:12px">Na análise você vai:</h3>
           <ul class="fit-col" style="padding:0">
             <li style="display:flex;gap:10px;margin-bottom:10px;color:#cbd5e1;font-size:.92rem"><span class="mark mark-c">✓</span>Entender gargalos atuais</li>
             <li style="display:flex;gap:10px;margin-bottom:10px;color:#cbd5e1;font-size:.92rem"><span class="mark mark-c">✓</span>Avaliar oportunidades de crescimento</li>
@@ -965,7 +966,7 @@ footer{background:var(--bg-deep);border-top:1px solid rgba(255,255,255,.06);padd
             <li style="display:flex;gap:10px;margin-bottom:10px;color:#cbd5e1;font-size:.92rem"><span class="mark mark-c">✓</span>Receber uma visão estratégica inicial</li>
             <li style="display:flex;gap:10px;color:#cbd5e1;font-size:.92rem"><span class="mark mark-c">✓</span>Ter clareza sobre verba e próximos passos</li>
           </ul>
-          <p class="privacy" style="text-align:left;margin-top:14px">O diagnóstico não é uma promessa de resultado. É uma análise estratégica para entender se e como o tráfego pago pode fazer sentido para o seu negócio.</p>
+          <p class="privacy" style="text-align:left;margin-top:14px">A análise não é uma promessa de resultado. É uma avaliação estratégica para entender se e como o tráfego pago pode fazer sentido para o seu negócio.</p>
         </div>
       </div>
     </div>
@@ -980,12 +981,12 @@ footer{background:var(--bg-deep);border-top:1px solid rgba(255,255,255,.06);padd
       <h2>Dúvidas frequentes</h2>
     </div>
     <div class="faq">
-      <div class="faq-item reveal"><button class="faq-q">Quanto preciso investir em tráfego pago?<span class="plus">+</span></button><div class="faq-a"><div>Depende do seu segmento, objetivo e região de atuação. No diagnóstico, avaliamos uma verba inicial coerente com o seu cenário.</div></div></div>
+      <div class="faq-item reveal"><button class="faq-q">Quanto preciso investir em tráfego pago?<span class="plus">+</span></button><div class="faq-a"><div>Depende do seu segmento, objetivo e região de atuação. Na análise, avaliamos uma verba inicial coerente com o seu cenário.</div></div></div>
       <div class="faq-item reveal"><button class="faq-q">Vocês trabalham com Meta Ads e Google Ads?<span class="plus">+</span></button><div class="faq-a"><div>Sim. A Mouran Midia trabalha com estratégias em Meta Ads e Google Ads, escolhendo os canais de acordo com o objetivo e o momento do negócio.</div></div></div>
       <div class="faq-item reveal"><button class="faq-q">Vocês garantem resultado?<span class="plus">+</span></button><div class="faq-a"><div>Não prometemos resultados garantidos, porque tráfego depende de oferta, mercado, verba, atendimento e processo comercial. O que garantimos é estratégia, acompanhamento, otimização e clareza na condução das campanhas.</div></div></div>
       <div class="faq-item reveal"><button class="faq-q">Em quanto tempo começo a ver resultados?<span class="plus">+</span></button><div class="faq-a"><div>Algumas campanhas podem gerar sinais nos primeiros dias, mas uma estratégia consistente exige testes, análise e otimização. O prazo varia conforme o negócio, verba e estrutura.</div></div></div>
       <div class="faq-item reveal"><button class="faq-q">A Mouran Midia atende empresas fora de Cacoal?<span class="plus">+</span></button><div class="faq-a"><div>Sim. Atendemos empresas em Cacoal/RO, no Brasil e também em outros mercados, de forma online.</div></div></div>
-      <div class="faq-item reveal"><button class="faq-q">O diagnóstico é gratuito?<span class="plus">+</span></button><div class="faq-a"><div>Sim. O diagnóstico inicial é gratuito e serve para entender o seu cenário e avaliar se faz sentido avançarmos com uma estratégia de tráfego.</div></div></div>
+      <div class="faq-item reveal"><button class="faq-q">A análise é gratuita?<span class="plus">+</span></button><div class="faq-a"><div>Sim. A análise inicial é gratuita e serve para entender o seu cenário e avaliar se faz sentido avançarmos com uma estratégia de tráfego.</div></div></div>
       <div class="faq-item reveal"><button class="faq-q">Minha empresa nunca anunciou. Vocês conseguem ajudar?<span class="plus">+</span></button><div class="faq-a"><div>Sim. Ajudamos tanto empresas que estão começando quanto negócios que já anunciam e querem melhorar seus resultados.</div></div></div>
     </div>
   </div>
@@ -997,8 +998,8 @@ footer{background:var(--bg-deep);border-top:1px solid rgba(255,255,255,.06);padd
     <h2>Se seus anúncios ainda não vendem como deveriam, talvez o problema não seja o tráfego. <span class="blue">Pode ser a estratégia.</span></h2>
     <p class="lead">Fale com a Mouran Midia e descubra como transformar investimento em anúncios em oportunidades reais de venda.</p>
     <div class="hero-ctas">
-      <a href="#contato" class="btn btn-primary btn-lg">Solicitar diagnóstico</a>
-      <a href="https://wa.me/5569992431461?text=Ol%C3%A1%2C%20vim%20do%20site%20e%20gostaria%20de%20agendar%20meu%20diagn%C3%B3stico." class="btn btn-wpp btn-lg" target="_blank" rel="noopener">Falar no WhatsApp</a>
+      <a href="#contato" class="btn btn-primary btn-lg">Gerar Análise</a>
+      <a href="https://wa.me/5569992431461?text=Ol%C3%A1%2C%20vim%20do%20site%20e%20gostaria%20de%20gerar%20minha%20an%C3%A1lise." class="btn btn-wpp btn-lg" target="_blank" rel="noopener">Falar no WhatsApp</a>
     </div>
   </div>
 </section>
@@ -1021,7 +1022,7 @@ footer{background:var(--bg-deep);border-top:1px solid rgba(255,255,255,.06);padd
       </div>
       <div>
         <h4>Contato</h4>
-        <a href="https://wa.me/5569992431461?text=Ol%C3%A1%2C%20vim%20do%20site%20e%20gostaria%20de%20agendar%20meu%20diagn%C3%B3stico." target="_blank" rel="noopener">WhatsApp: (69) 99243-1461</a>
+        <a href="https://wa.me/5569992431461?text=Ol%C3%A1%2C%20vim%20do%20site%20e%20gostaria%20de%20gerar%20minha%20an%C3%A1lise." target="_blank" rel="noopener">WhatsApp: (69) 99243-1461</a>
         <a href="https://www.instagram.com/esdras_ins/" target="_blank" rel="noopener">Instagram: @esdras_ins</a>
         <a href="mailto:mouranmidia@gmail.com">mouranmidia@gmail.com</a>
         <a href="#">Política de privacidade</a>
@@ -1032,7 +1033,7 @@ footer{background:var(--bg-deep);border-top:1px solid rgba(255,255,255,.06);padd
 </footer>
 
 <!-- Floating WhatsApp -->
-<a href="https://wa.me/5569992431461?text=Ol%C3%A1%2C%20vim%20do%20site%20e%20gostaria%20de%20agendar%20meu%20diagn%C3%B3stico." class="wpp-float" target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
+<a href="https://wa.me/5569992431461?text=Ol%C3%A1%2C%20vim%20do%20site%20e%20gostaria%20de%20gerar%20minha%20an%C3%A1lise." class="wpp-float" target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
   <svg viewBox="0 0 32 32"><path d="M16 3C9.4 3 4 8.4 4 15c0 2.1.6 4.1 1.6 5.9L4 29l8.3-1.6c1.7.9 3.6 1.4 5.7 1.4 6.6 0 12-5.4 12-12S22.6 3 16 3zm0 21.8c-1.8 0-3.5-.5-5-1.4l-.4-.2-4.9 1 1-4.8-.2-.4c-1-1.6-1.5-3.4-1.5-5.3C5 9.5 9.9 4.6 16 4.6S27 9.5 27 15.6 22.1 24.8 16 24.8zm5.6-6.9c-.3-.2-1.8-.9-2.1-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.2-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.2-.2.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.2-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.2.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.3-.7.3-1.3.2-1.4-.1-.2-.3-.2-.6-.4z"/></svg>
 </a>
 
@@ -1097,7 +1098,7 @@ document.getElementById('leadForm').addEventListener('submit', function (e) {
   e.preventDefault();
   const d = new FormData(this);
   const txt =
-    `*Novo diagnóstico — Mouran Midia*%0A` +
+    `*Nova análise — Mouran Midia*%0A` +
     `Nome: ${d.get('nome')||'-'}%0A` +
     `WhatsApp: ${d.get('wpp')||'-'}%0A` +
     `Email: ${d.get('email')||'-'}%0A` +
@@ -1109,6 +1110,39 @@ document.getElementById('leadForm').addEventListener('submit', function (e) {
     `Mensagem: ${d.get('msg')||'-'}`;
   window.open(`https://wa.me/${WPP_NUMERO}?text=${txt}`, '_blank');
 });
+
+// Carrossel de clientes: auto-scroll + arrastar (mouse/dedo)
+(function(){
+  const m=document.querySelector('.logo-marquee');
+  const track=document.querySelector('.logo-track');
+  if(!m||!track)return;
+  let paused=false,isDown=false,startX=0,startScroll=0;
+  function half(){return track.scrollWidth/2;}
+  function loop(){const h=half();if(m.scrollLeft>=h)m.scrollLeft-=h;else if(m.scrollLeft<0)m.scrollLeft+=h;}
+  function tick(){if(!paused&&!isDown){m.scrollLeft+=0.5;loop();}requestAnimationFrame(tick);}
+  requestAnimationFrame(tick);
+  m.addEventListener('mouseenter',()=>{paused=true;});
+  m.addEventListener('mouseleave',()=>{if(!isDown)paused=false;});
+  m.addEventListener('pointerdown',e=>{
+    if(e.pointerType!=='mouse')return;
+    isDown=true;paused=true;m.classList.add('dragging');
+    startX=e.clientX;startScroll=m.scrollLeft;
+    try{m.setPointerCapture(e.pointerId);}catch(_){}
+  });
+  m.addEventListener('pointermove',e=>{
+    if(!isDown)return;
+    m.scrollLeft=startScroll-(e.clientX-startX);loop();
+  });
+  function endDrag(e){
+    if(!isDown)return;
+    isDown=false;m.classList.remove('dragging');paused=false;
+    try{m.releasePointerCapture(e.pointerId);}catch(_){}
+  }
+  m.addEventListener('pointerup',endDrag);
+  m.addEventListener('pointercancel',endDrag);
+  m.addEventListener('touchstart',()=>{paused=true;},{passive:true});
+  m.addEventListener('touchend',()=>{setTimeout(()=>{if(!isDown)paused=false;},1200);},{passive:true});
+})();
 </script>
 </body>
 </html>
